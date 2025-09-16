@@ -1,0 +1,20 @@
+The two tasks that are loaded in the scene are close_grill and take_plate_off_the_coloured_dishrake
+
+
+Meat is placed on side of the grill,
+
+
+0 - Approach Meat
+1 - Grasp Meat - Dynamically Moves with Meat
+2 - Pick Meat
+3 - Meat slightly above grill
+4 - Meat on grill
+5 - Apprach the plate
+6 - Grasp the plate
+7 - Pick the plate
+8 - Plate slightly above target
+9 - Plate on target
+10 - Apprach the grill
+11 - Grasp the grill
+grill_lid_motion_path- Path to follow after grasping the grill
+13 - Dynamically moves with Plate

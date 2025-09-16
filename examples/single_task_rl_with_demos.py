@@ -32,7 +32,7 @@ obs_config.set_all(True)
 action_mode = MoveArmThenGripper(
     arm_action_mode=JointVelocity(), gripper_action_mode=Discrete())
 env = Environment(
-    action_mode, DATASET, obs_config, headless = True)
+    action_mode, DATASET, obs_config, headless = False)
 env.launch()
 
 task = env.get_task(ReachTarget)
@@ -50,7 +50,7 @@ for i in range(training_steps):
         descriptions, obs = task.reset()
         print(descriptions)
     action = agent.act(obs)
-    print(action)
+    # print(action)
     obs, reward, terminate = task.step(action)
 
 print('Done')

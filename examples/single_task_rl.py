@@ -4,7 +4,7 @@ from rlbench.action_modes.arm_action_modes import JointVelocity
 from rlbench.action_modes.gripper_action_modes import Discrete
 from rlbench.environment import Environment
 from rlbench.observation_config import ObservationConfig
-from rlbench.tasks import ReachTarget
+from rlbench.tasks import OpenGrill
 
 
 class Agent(object):
@@ -22,10 +22,10 @@ env = Environment(
     action_mode=MoveArmThenGripper(
         arm_action_mode=JointVelocity(), gripper_action_mode=Discrete()),
     obs_config=ObservationConfig(),
-    headless=True)
+    headless=False)
 env.launch()
 
-task = env.get_task(ReachTarget)
+task = env.get_task(OpenGrill)
 
 agent = Agent(env.action_shape)
 

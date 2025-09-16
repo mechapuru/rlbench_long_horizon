@@ -87,7 +87,7 @@ class JointVelocity(ArmActionMode):
         scene.robot.arm.set_joint_target_velocities(np.zeros_like(action))
 
     def action_shape(self, scene: Scene) -> tuple:
-        print("The action shape returning from arm_action_mode is ", SUPPORTED_ROBOTS[scene.robot_setup][2])
+        # print("The action shape returning from arm_action_mode is ", SUPPORTED_ROBOTS[scene.robot_setup][2])
         return SUPPORTED_ROBOTS[scene.robot_setup][2],
         # return 
 

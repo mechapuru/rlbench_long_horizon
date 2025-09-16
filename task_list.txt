@@ -1,0 +1,39 @@
+1. Reach
+2. Picking - [From a waypoint near the object, finding a grasp () - grasping it - picking it up a certain height]
+3. Placing [Sometimes orientation is a strict crietrion (insertion) sometimes not]
+4. Opening
+5. Closing
+
+
+Examples (prompt and scene)
+1. 
+
+
+
+Objects in the scene:
+1. Blocks
+    a. Numbered
+    b. Small
+    c. Normal
+2. Boxes
+3. Laptop
+4. Remote
+5. Cups (without Handle)
+6. Cups with Handle
+7. Cupboard
+8. Knife
+9. Umbrella
+10. Buttons
+11. Grill
+12. Meat
+13. Lamp
+14. Different Shaped Objects (shape sorter)
+15. USB - Computer
+16. Groceries (for cupboard)
+17. Weighing Scale
+18. Garbage Can
+19. Rubbish
+20. Phone on base
+21. Book / Bookshelf
+22. Money in the safe
+23. Plates - rack
