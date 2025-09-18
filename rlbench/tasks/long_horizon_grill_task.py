@@ -26,6 +26,7 @@ class LongHorizonGrillTask(Task):
         self.success_sensor_grill = ProximitySensor('success_meat_on_grill')
         self.success_sensor_plate_source = ProximitySensor('success_source')
         self.success_sensor_plate_target = ProximitySensor('success_target')
+        self.success_sensor_meat_plate = ProximitySensor('success_meat_on_plate')
 
         self.register_graspable_objects([self.steak, self.chicken, self.plate])
 
@@ -33,7 +34,8 @@ class LongHorizonGrillTask(Task):
             DetectedCondition(self.chicken, self.success_sensor_grill),
             DetectedCondition(self.plate, self.success_sensor_plate_source, negated=True),
             DetectedCondition(self.plate, self.success_sensor_plate_target),
-            JointCondition(self.lid_joint, np.deg2rad(50)),
+            DetectedCondition(self.chicken, self.success_sensor_meat_plate),
+            JointCondition(self.lid_joint, np.deg2rad(30)),
             NothingGrasped(self.robot.gripper)
         ])
         logging.info('Success conditions registered.')
