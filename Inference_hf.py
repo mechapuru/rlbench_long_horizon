@@ -1,9 +1,8 @@
-
-
 import requests
+import base64
 
 API_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-VL-7B-Instruct"
-headers = {"Authorization": f"Bearer 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"}  # replace with your token
+headers = {"Authorization": f"Bearer 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"}  # replace with your token
 
 # List of your local image paths
 image_files = [
@@ -27,12 +26,20 @@ messages = [
 for path in image_files:
     with open(path, "rb") as f:
         img_bytes = f.read()
+    base64_image = base64.b64encode(img_bytes).decode("utf-8")
     messages[0]["content"].insert(
         0,  # put before text, order matters
-        {"type": "image", "image": img_bytes}
+        {"type": "image", "image": base64_image}
     )
 
 payload = {"inputs": messages}
 
 response = requests.post(API_URL, headers=headers, json=payload)
-print(response.json())
+
+print(f"Status Code: {response.status_code}")
+print(f"Response Text: {response.text}")
+
+try:
+    print(response.json())
+except requests.exceptions.JSONDecodeError:
+    print("Could not decode JSON from response.")

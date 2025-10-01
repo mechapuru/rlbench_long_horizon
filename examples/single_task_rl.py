@@ -1,4 +1,5 @@
 import numpy as np
+from PIL import Image
 from rlbench.action_modes.action_mode import MoveArmThenGripper
 from rlbench.action_modes.arm_action_modes import JointVelocity
 from rlbench.action_modes.gripper_action_modes import Discrete
@@ -22,7 +23,7 @@ env = Environment(
     action_mode=MoveArmThenGripper(
         arm_action_mode=JointVelocity(), gripper_action_mode=Discrete()),
     obs_config=ObservationConfig(),
-    headless=False)
+    headless=True)
 env.launch()
 
 task = env.get_task(OpenGrill)
@@ -37,6 +38,14 @@ for i in range(training_steps):
         print('Reset Episode')
         descriptions, obs = task.reset()
         print(descriptions)
+        
+        # Step the environment once to allow the renderer to capture the scene
+        obs, _, _ = task.step(agent.act(obs))
+        
+        # Save the image
+        # img = Image.fromarray(obs.front_rgb)
+        # img.save("front_camera_capture.png")
+        # print("Saved front_camera_capture.png")
     action = agent.act(obs)
     print(action)
     obs, reward, terminate = task.step(action)
