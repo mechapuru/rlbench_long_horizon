@@ -2,7 +2,7 @@ import requests
 import base64
 
 API_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-VL-7B-Instruct"
-headers = {"Authorization": f"Bearer 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"}  # replace with your token
+headers = {"Authorization": f""}  # replace with your token
 
 # List of your local image paths
 image_files = [
