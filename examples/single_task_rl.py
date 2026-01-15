@@ -30,6 +30,8 @@ task = env.get_task(OpenGrill)
 
 agent = Agent(env.action_shape)
 
+print("the action shape is", env.action_shape)
+
 training_steps = 120
 episode_length = 40
 obs = None
@@ -37,17 +39,9 @@ for i in range(training_steps):
     if i % episode_length == 0:
         print('Reset Episode')
         descriptions, obs = task.reset()
-        print(descriptions)
-        
-        # Step the environment once to allow the renderer to capture the scene
-        obs, _, _ = task.step(agent.act(obs))
-        
-        # Save the image
-        # img = Image.fromarray(obs.front_rgb)
-        # img.save("front_camera_capture.png")
-        # print("Saved front_camera_capture.png")
+        # print(descriptions)
     action = agent.act(obs)
-    print(action)
+    # print(action)
     obs, reward, terminate = task.step(action)
 
 print('Done')

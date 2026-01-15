@@ -111,6 +111,8 @@ from rlbench.tasks.water_plants import WaterPlants
 from rlbench.tasks.weighing_scales import WeighingScales
 from rlbench.tasks.wipe_desk import WipeDesk
 from rlbench.tasks.reach_target_multi import ReachTargetMulti
+from rlbench.tasks.long_horizon_grill_task import LongHorizonGrillTask
+from rlbench.tasks.long_horizon_grocery_task import LongHorizonGroceryTask
 
 FS10_V1 = {
     'train': [

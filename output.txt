@@ -1,2 +1,0 @@
-2025-09-26 11:10:21,155 - INFO - LongHorizonGrillTask: init_task called.
-2025-09-26 11:10:21,155 - INFO - Success conditions registered.
