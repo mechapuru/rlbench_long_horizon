@@ -11,6 +11,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+OpenGrill_visuals
+PutGroceriesInCupboard_visuals
 long_horizon_scenes_progress.zip
 .Python
 build/
