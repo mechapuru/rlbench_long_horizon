@@ -1,13 +1,26 @@
-This Repo is aimed to reproduce the results of VizCoast [https://arxiv.org/abs/2510.25548] on two tasks specially designed in RLBench to test the system's long Horizon Capabilities.
+This Repo is aimed to reproduce the results of VizCoast [https://arxiv.org/abs/2510.25548] on two tasks specially designed in RLBench to test the system's long Horizon Capabilities
 
 
-
-
-
-
-
-
-
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
 
 
