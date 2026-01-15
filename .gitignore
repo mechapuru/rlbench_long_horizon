@@ -11,6 +11,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+long_horizon_scenes_progress.zip
 .Python
 build/
 outputs/
